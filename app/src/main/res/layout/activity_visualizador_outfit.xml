@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txtTituloVisualizador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MI OUTFIT"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toca una prenda para cambiarla"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:layout_marginBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp">
+                <ImageView
+                    android:id="@+id/imgTopVisualizador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Top"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp">
+                <ImageView
+                    android:id="@+id/imgOuterVisualizador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Abrigo"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp">
+                <ImageView
+                    android:id="@+id/imgBottomVisualizador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Bottom"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp">
+                <ImageView
+                    android:id="@+id/imgShoesVisualizador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE"
+                    android:contentDescription="Calzado"/>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnGenerarOtro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🔄 GENERAR OTRO"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnGuardarVisualizador"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💾 GUARDAR EN FAVORITOS"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnCalendarioVisualizador"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📅 AGENDAR EN CALENDARIO"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnCompartirVisualizador"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📤 COMPARTIR"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir Nueva Prenda"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Preview de la Imagen -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/background_card">
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/gray_100"
+                android:contentDescription="Vista previa de la prenda" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Categoría -->
+        <TextView
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categoría *"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_primary" />
+
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/spinner_background"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nombre/Subtipo -->
+        <TextView
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre o Subtipo"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <EditText
+            android:id="@+id/inputSubtipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Camiseta básica, Vaqueros rotos..."
+            android:background="@drawable/spinner_background"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint" />
+
+        <!-- Talla -->
+        <TextView
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Talla *"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <Spinner
+            android:id="@+id/spinnerTalla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/spinner_background"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Colores -->
+        <TextView
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colores *"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerColor1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginEnd="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerColor2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:background="@drawable/spinner_background"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Marca -->
+        <TextView
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marca"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <EditText
+            android:id="@+id/inputMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Zara..."
+            android:background="@drawable/spinner_background"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint" />
+
+        <!-- Estilos -->
+        <Button
+            android:id="@+id/btnEstilos"
+            style="@style/ButtonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Estilos..."
+            android:layout_marginBottom="16dp" />
+
+        <!-- Switch Sucio/Lavandería -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/spinner_background"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/TextBody"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="¿Está en la lavandería?"
+                android:textColor="@color/text_primary" />
+
+            <Switch
+                android:id="@+id/switchSucio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btnGuardarFinal"
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Guardar Prenda"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

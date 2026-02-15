@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Armario Inteligente</string>
+
+    <string name="cargando">Cargando…</string>
+    <string name="guardando">Guardando…</string>
+    <string name="borrando">Borrando…</string>
+    <string name="error_generico">Ha ocurrido un error</string>
+    <string name="sin_internet">Sin conexión a Internet</string>
+
+    <string name="permiso_camara_titulo">Permiso de Cámara</string>
+    <string name="permiso_camara_mensaje">Necesitamos acceso a la cámara para tomar fotos de tu ropa.</string>
+    <string name="permiso_concedido">Permiso concedido</string>
+    <string name="permiso_denegado">Permiso denegado. No podrás tomar fotos.</string>
+
+    <string name="btn_nueva_ropa">NUEVA\nROPA</string>
+    <string name="btn_mi_armario">MI\nARMARIO</string>
+    <string name="btn_mis_looks">MIS\nLOOKS</string>
+    <string name="btn_calendario">AGENDA</string>
+    <string name="btn_estadisticas">ESTADÍSTICAS</string>
+
+    <string name="prendas_contador">%d prendas</string>
+    <string name="buscar_prenda">Buscar prenda…</string>
+    <string name="sin_prendas">Aún no has añadido ninguna prenda.\nToca el botón de cámara para empezar.</string>
+    <string name="confirmar_borrado">¿Seguro que quieres borrar las prendas seleccionadas?</string>
+
+    <string name="titulo_guardar">Guardar Prenda</string>
+    <string name="categoria">Categoría</string>
+    <string name="estilos">Estilos</string>
+    <string name="subtipo_hint">Descripción (Ej: Camisa de lino)</string>
+    <string name="marca_hint">Marca (Ej: Zara)</string>
+    <string name="color_principal">Color Principal</string>
+    <string name="color_secundario">Color Secundario</string>
+    <string name="talla">Talla</string>
+    <string name="prenda_en_lavanderia">¿Está sucia? (En lavandería)</string>
+    <string name="btn_guardar">GUARDAR</string>
+    <string name="prenda_guardada">¡Prenda guardada!</string>
+
+    <string name="titulo_ia">Asistente de Estilo</string>
+    <string name="ocasion">¿Para qué ocasión?</string>
+    <string name="quiero_ponerme">✅ Quiero ponerme…</string>
+    <string name="no_quiero_ponerme">❌ NO quiero ponerme…</string>
+    <string name="contexto">Contexto</string>
+    <string name="interior">🏠 Interior</string>
+    <string name="exterior">🌳 Exterior</string>
+    <string name="clima">Clima</string>
+    <string name="frio">❄️ Frío</string>
+    <string name="calor">☀️ Calor</string>
+    <string name="accesorios">Añadir Accesorios</string>
+    <string name="btn_disenar_outfit">✨ DISEÑAR OUTFIT</string>
+    <string name="disenando">Diseñando…</string>
+    <string name="sin_combinacion">No hay combinación válida con las prendas disponibles.</string>
+
+    <string name="alerta_sucia">⚠️ CONTIENE ROPA SUCIA</string>
+    <string name="tocar_para_cambiar">Toca una prenda para cambiarla</string>
+    <string name="btn_guardar_favorito">❤️ GUARDAR FAVORITO</string>
+    <string name="btn_actualizar">💾 ACTUALIZAR</string>
+    <string name="btn_me_lo_pongo">✅ ME LO PONGO HOY</string>
+    <string name="btn_compartir">📤 COMPARTIR</string>
+    <string name="btn_agendar">📅 AGENDAR</string>
+    <string name="btn_regenerar">🔄 GENERAR OTRO</string>
+    <string name="que_hacemos">¿Qué hacemos?</string>
+    <string name="marcar_sucio">Marcar como Sucio (A lavar)</string>
+    <string name="reutilizar">Reutilizar (Mantener limpio)</string>
+    <string name="outfit_registrado">Outfit registrado</string>
+
+    <string name="titulo_favoritos">MIS LOOKS</string>
+    <string name="subtitulo_favoritos">Tus combinaciones favoritas</string>
+    <string name="sin_favoritos">Aún no has guardado ningún look.\nUsa la varita mágica ✨ en tu armario.</string>
+    <string name="nombre_outfit_hint">Nombre del outfit</string>
+    <string name="outfit_guardado">Outfit guardado</string>
+    <string name="outfit_actualizado">Outfit actualizado</string>
+
+    <string name="titulo_calendario">MI AGENDA</string>
+    <string name="eventos_del_dia">Eventos del día:</string>
+    <string name="sin_eventos">Nada planificado para este día.</string>
+    <string name="tipo_agenda">Tipo</string>
+    <string name="evento_1_dia">Evento (1 Día)</string>
+    <string name="viaje_rango">Viaje (Rango de fechas)</string>
+    <string name="nombre_evento_hint">Nombre Evento/Viaje</string>
+    <string name="seleccionar_fin">Ahora selecciona el FIN</string>
+    <string name="guardado_agenda">Guardado en Agenda</string>
+
+    <string name="titulo_estadisticas">TUS ESTADÍSTICAS</string>
+    <string name="total_prendas">Prendas</string>
+    <string name="ropa_disponible">Ropa Disponible</string>
+    <string name="top_3_favoritos">🏆 TUS FAVORITOS (Top 3)</string>
+    <string name="ropa_olvidada">👻 ROPA OLVIDADA (Sin uso)</string>
+    <string name="sin_datos">Añade ropa para ver estadísticas.</string>
+    <string name="usas_todo">¡Usas todo tu armario!</string>
+    <string name="usar_app">Usa la app para ver datos aquí.</string>
+    <string name="usada_veces">Usada %d veces</string>
+
+    <string name="si">SÍ</string>
+    <string name="no">NO</string>
+    <string name="aceptar">ACEPTAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="cerrar">CERRAR</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="borrar">BORRAR</string>
+    <string name="editar">EDITAR</string>
+    <string name="duplicar">DUPLICAR</string>
+    <string name="compartir">COMPARTIR</string>
+
+    <string-array name="estilos_completo">
+        <item>Casual</item>
+        <item>Formal</item>
+        <item>Deportivo</item>
+        <item>Elegante</item>
+        <item>Urbano</item>
+        <item>Boho</item>
+        <item>Clásico</item>
+        <item>Minimalista</item>
+        <item>Vintage</item>
+        <item>Rock</item>
+        <item>Romántico</item>
+        <item>Profesional</item>
+    </string-array>
+
+    <string-array name="ocasiones">
+        <item>Trabajo</item>
+        <item>Casual/Diario</item>
+        <item>Fiesta/Noche</item>
+        <item>Deporte</item>
+        <item>Formal</item>
+        <item>Playa/Verano</item>
+        <item>Viaje</item>
+        <item>Casa</item>
+    </string-array>
+
+</resources>

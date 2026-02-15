@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDITAR PRENDA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgPrendaPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="#DDDDDD"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORÍA"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategoriaEditar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE DE LA PRENDA"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etSubtipoEditar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Ej: Camiseta, Jeans, Zapatillas..."
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COLORES (Principal y Secundario)"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerColor1Editar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerColor2Editar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESTILOS"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnEstilosEditar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Seleccionar estilos..."
+            android:textColor="#000000"
+            android:backgroundTint="#EEEEEE"
+            android:textAlignment="textStart"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <CheckBox
+            android:id="@+id/checkFavoritoEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ Marcar como favorito"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/checkLavanderiaEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧺 En lavandería"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarEdicion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="CANCELAR"
+                android:textColor="#000000"
+                android:backgroundTint="#EEEEEE"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnGuardarCambios"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="GUARDAR"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#D32F2F"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

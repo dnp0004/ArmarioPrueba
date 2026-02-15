@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txtDiaMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android.text="1"/>
+
+    <View
+        android:id="@+id/viewEventoPunto"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/punto_evento"
+        android:visibility="gone"/>
+
+</LinearLayout>

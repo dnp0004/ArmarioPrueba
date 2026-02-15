@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mi Agenda"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btnHoy"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="HOY"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9800"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/txtFechaSeleccionada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Viernes, 24 de Octubre"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:padding="16dp"
+            android:gravity="center"
+            android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+            android:drawableTint="#757575"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Outfits planificados:"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerEventos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_prenda"/>
+
+    <Button
+        android:id="@+id/btnAñadirEvento"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Planificar Outfit para este día"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="30dp"
+        android:backgroundTint="#D32F2F"/>
+
+</LinearLayout>

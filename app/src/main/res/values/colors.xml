@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pinterest_red">#E60023</color>
+    <color name="elegant_gold">#D4AF37</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="midnight_black">#121212</color>
+    <color name="charcoal_gray">#333333</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="accent">#03DAC5</color>
+
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_light_gray">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_secondary">#F5F5F5</color>
+
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_hint">#999999</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <color name="button_secondary">#E0E0E0</color>
+
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+
+    <color name="categoria_top">#E3F2FD</color>
+    <color name="categoria_bottom">#FFF3E0</color>
+    <color name="categoria_dress">#F3E5F5</color>
+    <color name="categoria_shoes">#E8F5E9</color>
+    <color name="categoria_outer">#FBE9E7</color>
+    <color name="categoria_accessories">#FCE4EC</color>
+
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+    <color name="divider">#E0E0E0</color>
+    <color name="border_light">#DDDDDD</color>
+    <color name="border_dark">#999999</color>
+
+    <color name="overlay_light">#80FFFFFF</color>
+    <color name="overlay_dark">#80000000</color>
+
+</resources>

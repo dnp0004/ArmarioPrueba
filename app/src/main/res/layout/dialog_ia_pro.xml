@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/midnight_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✨ DISEÑADOR DE OUTFIT"
+            android:textColor="@color/elegant_gold"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- SECCIÓN OCASIÓN -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OCASIÓN"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerOcasion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- SECCIÓN PERSONALIZACIÓN -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERSONALIZACIÓN"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnSeleccionarPrenda"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="✅ Quiero ponerme..."
+            android:backgroundTint="#2E7D32"
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnExcluirPrenda"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="❌ NO quiero ponerme..."
+            android:backgroundTint="#C62828"
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- SECCIÓN CONTEXTO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTEXTO"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgContexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbInterior"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="🏠 Interior"
+                android:textColor="@color/white"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbExterior"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="🌳 Exterior"
+                android:textColor="@color/white"/>
+        </RadioGroup>
+
+        <!-- SECCIÓN CLIMA -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLIMA"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgClima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbFrio"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="❄️ Frío"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/rbCalor"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="☀️ Calor"
+                android:textColor="@color/white"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <!-- CHECKBOX ACCESORIOS -->
+        <CheckBox
+            android:id="@+id/chkAccesorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir Accesorios"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- BOTÓN GENERAR -->
+        <Button
+            android:id="@+id/btnGenerarFinal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="✨ DISEÑAR OUTFIT"
+            android:backgroundTint="@color/elegant_gold"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

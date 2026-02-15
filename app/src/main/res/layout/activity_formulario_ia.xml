@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧠 ASISTENTE IA AVANZADO"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿PARA QUÉ OCASIÓN?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerOcasionIA"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿CUÁNTAS PIEZAS QUIERES?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/seekPiezas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="6"
+            android:progress="1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/txtPiezasSeleccionadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 piezas"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿CUÁNTO TIEMPO ESTARÁS?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/seekHoras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="23"
+            android:progress="1"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/txtHorasSeleccionadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 horas"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿QUÉ TEMPERATURA HARÁ?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <SeekBar
+            android:id="@+id/seekTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="30"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/txtTemperaturaSeleccionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20°C"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿DÓNDE VAS A IR?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/inputUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Restaurante, Parque, Oficina..."
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿QUÉ VAS A HACER?"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/inputActividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Caminar, Estar sentado, Bailar..."
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTEXTO"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rgInteriorExterior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rbInterior"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="🏠 Interior"
+                android:textColor="#000000"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbExterior"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="🌳 Exterior"
+                android:textColor="#000000"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREFERENCIAS ESPECIALES"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <CheckBox
+            android:id="@+id/chkNecesitaAbrigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Necesito abrigo/chaqueta"
+            android:textColor="#000000"/>
+
+        <CheckBox
+            android:id="@+id/chkNecesitaAccesorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quiero accesorios"
+            android:textColor="#000000"/>
+
+        <CheckBox
+            android:id="@+id/chkPosibilidadLluvia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puede llover"
+            android:textColor="#000000"/>
+
+        <CheckBox
+            android:id="@+id/chkMuchoSol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☀️ Mucho sol (gafas/sombrero)"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COLORES PREFERIDOS"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupColores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INSPIRACIÓN VISUAL (OPCIONAL)"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnAñadirFotoInspiracion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="📷 AÑADIR FOTO DE INSPIRACIÓN"
+            android:backgroundTint="#2E2E2E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:id="@+id/layoutImagenesInspiracion"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btnGenerarOutfitIA"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="✨ GENERAR OUTFIT PERSONALIZADO"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

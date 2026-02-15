@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_filtros"
+        android:title="Filtros avanzados"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_personalizar"
+        android:title="Personalizar Outfit"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_favoritos"
+        android:title="Solo favoritos"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/viewFondoEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Barra de estado (puesto/no puesto) -->
+        <View
+            android:id="@+id/viewEstado"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="12dp"
+            android:background="#FF9800" />
+
+        <!-- Información del evento -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTituloEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reunión importante"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txtFechaEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lunes, 15 de febrero"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txtHoraEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10:00"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Previews de prendas -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/imgPreview1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="4dp"
+                android:background="#F5F5F5"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgPreview2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="4dp"
+                android:background="#F5F5F5"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgPreview3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:background="#F5F5F5"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

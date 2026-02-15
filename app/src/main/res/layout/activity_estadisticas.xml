@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light_gray"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Estadísticas"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBarEstadisticas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Card 1: Resumen General -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardStats1"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resumen General"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Total de Prendas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total de prendas:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTotalPrendas"
+                        style="@style/TextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primary"
+                        android:textSize="32sp" />
+
+                </LinearLayout>
+
+                <!-- Prendas Limpias -->
+                <TextView
+                    android:id="@+id/txtPrendasLimpias"
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 limpias (0%)"
+                    android:textColor="@color/success"
+                    android:layout_marginBottom="8dp"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@android:drawable/presence_online" />
+
+                <!-- Prendas Sucias -->
+                <TextView
+                    android:id="@+id/txtPrendasSucias"
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 en lavandería (0%)"
+                    android:textColor="@color/warning"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@android:drawable/presence_busy" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 2: Top Stats -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardStats2"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏆 Destacados"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Categoría con más prendas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Categoría más llena:" />
+
+                    <TextView
+                        android:id="@+id/txtCategoriaTop"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                </LinearLayout>
+
+                <!-- Marca más usada -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Marca favorita:" />
+
+                    <TextView
+                        android:id="@+id/txtPrendaMasUsada"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent" />
+
+                </LinearLayout>
+
+                <!-- Prendas nunca usadas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nunca usadas:" />
+
+                    <TextView
+                        android:id="@+id/txtNuncaUsadas"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_secondary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3: Distribución -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardStats3"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📈 Distribución"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Por Categoría -->
+                <TextView
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Por Categoría:"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/txtPorCategoria"
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sin datos"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="16dp"
+                    android:lineSpacingMultiplier="1.3" />
+
+                <!-- Por Color -->
+                <TextView
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Por Color:"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/txtPorColor"
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sin datos"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="16dp"
+                    android:lineSpacingMultiplier="1.3" />
+
+                <!-- Por Marca -->
+                <TextView
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Por Marca:"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/txtPorMarca"
+                    style="@style/TextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sin datos"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingMultiplier="1.3" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

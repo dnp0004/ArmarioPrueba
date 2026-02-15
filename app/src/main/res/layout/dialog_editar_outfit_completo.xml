@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTituloEditorOutfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EDITAR OUTFIT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toca 'Cambiar' para elegir otra prenda de la misma categoría"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/containerPrendasEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnGuardarEdicionOutfit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💾 GUARDAR CAMBIOS"
+            android:backgroundTint="@color/pinterest_red"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

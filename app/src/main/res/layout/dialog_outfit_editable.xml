@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TU OUTFIT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toca cada prenda para cambiarla o eliminarla"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- CONTENEDOR DE PRENDAS (dinámico) -->
+        <LinearLayout
+            android:id="@+id/containerPrendasOutfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BOTÓN AÑADIR PRENDA -->
+        <Button
+            android:id="@+id/btnAñadirPrenda"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="➕ AÑADIR PRENDA"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/button_secondary"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BOTONES PRINCIPALES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnRegenerarOutfit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="🔄 Otro"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/button_secondary"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnGuardarOutfit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="💾 Guardar"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/pinterest_red"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCompartirOutfit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="📤 COMPARTIR"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/success_green"/>
+
+    </LinearLayout>
+</ScrollView>
