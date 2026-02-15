@@ -30,7 +30,5 @@
             android:rowCount="2"
             android:alignmentMode="alignMargins"
             android:layout_gravity="center_horizontal"/>
-
     </ScrollView>
-
 </LinearLayout>

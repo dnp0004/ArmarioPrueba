@@ -183,8 +183,10 @@ public class VisualizadorOutfitActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_selector_prenda_grid, null);
         GridView grid = dialogView.findViewById(R.id.gridPrendasSelector);
+        EditText buscador = dialogView.findViewById(R.id.editBuscarPrenda);
 
-        ArrayAdapter<Prenda> adapter = new ArrayAdapter<>(this, R.layout.item_prenda_selector, prendas) {
+        List<Prenda> prendasFiltradas = new ArrayList<>(prendas);
+        ArrayAdapter<Prenda> adapter = new ArrayAdapter<>(this, R.layout.item_prenda_selector, prendasFiltradas) {
             @Override
             @NonNull
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -194,7 +196,11 @@ public class VisualizadorOutfitActivity extends AppCompatActivity {
                 if (p != null) {
                     ImageView img = view.findViewById(R.id.imgSelectorPrenda);
                     TextView txt = view.findViewById(R.id.txtNombreSelectorPrenda);
+                    TextView txtColor = view.findViewById(R.id.txtColorSelectorPrenda);
+                    TextView txtEstilo = view.findViewById(R.id.txtEstiloSelectorPrenda);
                     if (txt != null) txt.setText(p.subtipo);
+                    if (txtColor != null) txtColor.setText(p.color);
+                    if (txtEstilo != null) txtEstilo.setText(p.estilo);
                     if (img != null && p.rutaImagen != null) Glide.with(getContext()).load(new File(p.rutaImagen)).centerCrop().into(img);
                 }
                 return view;
@@ -202,23 +208,34 @@ public class VisualizadorOutfitActivity extends AppCompatActivity {
         };
 
         grid.setAdapter(adapter);
-        grid.setOnItemClickListener((parent, view, position, id) -> {
-            Prenda seleccionada = prendas.get(position);
-            switch (tipo) {
-                case "top":
-                    pTop = seleccionada;
-                    break;
-                case "bottom":
-                    pBottom = seleccionada;
-                    break;
-                case "shoes":
-                    pShoes = seleccionada;
-                    break;
-                case "outer":
-                    pOuter = seleccionada;
-                    break;
-            }
 
+        buscador.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                prendasFiltradas.clear();
+                for (Prenda p : prendas) {
+                    if (p.subtipo.toLowerCase().contains(s.toString().toLowerCase()) ||
+                            p.color.toLowerCase().contains(s.toString().toLowerCase()) ||
+                            p.estilo.toLowerCase().contains(s.toString().toLowerCase())) {
+                        prendasFiltradas.add(p);
+                    }
+                }
+                adapter.notifyDataSetChanged();
+            }
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        grid.setOnItemClickListener((parent, view, position, id) -> {
+            Prenda seleccionada = prendasFiltradas.get(position);
+            switch (tipo) {
+                case "top": pTop = seleccionada; break;
+                case "bottom": pBottom = seleccionada; break;
+                case "shoes": pShoes = seleccionada; break;
+                case "outer": pOuter = seleccionada; break;
+            }
             actualizarInterfaz();
             Toast.makeText(this, "Prenda seleccionada: " + seleccionada.subtipo, Toast.LENGTH_SHORT).show();
             if (dialogActual != null) dialogActual.dismiss();

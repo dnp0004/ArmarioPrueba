@@ -29,7 +29,6 @@
             android:gravity="center"
             android:layout_marginBottom="16dp"/>
 
-        <!-- CONTENEDOR DE PRENDAS (dinámico) -->
         <LinearLayout
             android:id="@+id/containerPrendasOutfit"
             android:layout_width="match_parent"
@@ -37,51 +36,40 @@
             android:orientation="vertical"
             android:layout_marginBottom="16dp"/>
 
-        <!-- BOTÓN AÑADIR PRENDA -->
         <Button
-            android:id="@+id/btnAñadirPrenda"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="➕ AÑADIR PRENDA"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/button_secondary"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- BOTONES PRINCIPALES -->
-        <LinearLayout
+            android:id="@+id/btnAddPrenda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:text="Añadir prenda"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
 
-            <Button
-                android:id="@+id/btnRegenerarOutfit"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
-                android:text="🔄 Otro"
-                android:textColor="@color/black"
-                android:backgroundTint="@color/button_secondary"
-                android:layout_marginEnd="4dp"/>
+        <Button
+            android:id="@+id/btnGuardarFavorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar en favoritos"
+            android:background="@color/accent"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
 
-            <Button
-                android:id="@+id/btnGuardarOutfit"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
-                android:text="💾 Guardar"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/pinterest_red"
-                android:layout_marginStart="4dp"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnAsignarDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asignar a día"
+            android:background="@color/secondary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"/>
 
         <Button
             android:id="@+id/btnCompartirOutfit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="📤 COMPARTIR"
+            android:layout_height="wrap_content"
+            android:text="Compartir"
+            android:background="@color/tertiary"
             android:textColor="@color/white"
-            android:backgroundTint="@color/success_green"/>
-
+            android:layout_marginBottom="16dp"/>
     </LinearLayout>
 </ScrollView>
